@@ -19,3 +19,10 @@ app.get("/", (req, res) => {
     const markup = `<h1>Benvenuto nel mio Blog!</h1>`;
     res.send(markup);
 })
+
+
+
+
+// importo il controller di posts
+
+
