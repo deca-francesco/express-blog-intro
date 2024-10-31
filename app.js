@@ -8,19 +8,12 @@ const host = "http://127.0.0.1"
 const port = 3000;
 
 
-
-/*
-// importo bootstrap
-const bootstrap = require('bootstrap');
-*/
-
 // inserisco la cartella public
 app.use(express.static("public"));
 
+
 // importo il controller di posts
 const postsController = require("./controllers/posts_controller.js")
-
-
 
 
 // server start
@@ -28,6 +21,7 @@ app.listen(port, () => {
     console.log(`Il server sta girando su ${host}:${port}`);
 })
 
+/*
 // express route "/" = home page
 app.get("/", (req, res) => {
     // creo il markup
@@ -36,12 +30,9 @@ app.get("/", (req, res) => {
     <h2><a href="/posts.html">Pagina dei post</a></h2>`;
     res.send(markup);
 })
-
+*/
 
 // rotta posts che usa il metodo index del controller posts
 // non la invochiamo. La invocherà express quando avrà una richiesta per questo endpoint
 app.get("/posts", postsController.index)
 
-
-// rotta alla pagina statica posts.html
-app.get("/posts.html")

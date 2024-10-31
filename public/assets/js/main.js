@@ -18,9 +18,10 @@ axios.get("/posts")
             const { title, description, image, tags  } = post;
             // markup del list item
             markup += `
-            <li class="col my-5 d-flex flex-column align-items-center">
-                <h3>${title}</h3>
-                <p>${description}</p>
+            <li class="col my-5 py-2 d-flex flex-column align-items-center bg-light">
+                <h2>${title}</h2>
+                <hr>
+                <h5>${description}</h5>
                 <img src="${image}">
                 <p>tags: ${tags}</p>
             </li>`
